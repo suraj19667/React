@@ -1,8 +1,8 @@
-const Cybrom=(props)=>{
+const Cybrom=()=>{
     return(
         <>
-        <h1>My name:{props.nm}</h1>
-        <h1>My City:{props.city}</h1>
+        <h1>Welcome to cybrom</h1>
+        <h1>We are web developer</h1>
         </>
     )
 }

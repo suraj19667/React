@@ -1,0 +1,13 @@
+body{
+    background-color: lightsteelblue;
+}
+h1{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    color: rgb(33, 2, 7);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline;
+    font-size: 50px;
+}
