@@ -1,57 +1,94 @@
-// import Header from "./Header.jsx"
-// import Middle from "./Middle.jsx"
-// import Footer from './Footer.jsx'
-// const App=()=>{
-//   return(
+
+import EmpData from "../EmpData";
+const App=()=>{
+
+//   const student=[
+//     {
+//       "rollno":123,
+//       "name":"suraj",
+//       "city":"Delhi",
+//       "fees":4999
+//     },
+//      {
+//       "rollno":123,
+//       "name":"shyam",
+//       "city":"Mumbai",
+//       "fees":4999
+//     },
+//      {
+//       "rollno":123,
+//       "name":"ramesh",
+//       "city":"Pune",
+//       "fees":4999
+//     },
+//      {
+//       "rollno":23,
+//       "name":"rahul",
+//       "city":"Hydrabad",
+//       "fees":49393
+//     },
+//      {
+//       "rollno":45,
+//       "name":"ram",
+//       "city":"Bhopal",
+//       "fees":498099
+//     }
+//   ]
+
+//   const ans=student.map((key)=>{
+//     return(
+//     <tr>
+
+//       <td>{key.rollno}</td>
+//       <td>{key.name}</td>
+//       <td>{key.city}</td>
+//       <td>{key.fees}</td>
+
+//     </tr>
+//   )
+//   })
+//     return(
 //         <>
-//       <Header/>
-//       <Middle/>
-//       <Footer/>
-
-//     </>
-    
-//   );
-// }
-// export default App;
-
-// import College from "./College";
-// const clgname="Sage University Bhopal";
-// const address="Katara, Bhopal";
-// const fees=50000;
-// const App=()=>{
-//   return(
-//     <>
-//     <h1 align="center">Welcome !!!</h1>
-//     <College clg={clgname} add={address} fs={fees}/>
+//     <table>
+//       <tr>
+//         <th>Roll NO</th>
+//         <th>Name</th>
+//         <th>City</th>
+//         <th>Fees</th>
+//       </tr>
+//       {ans}
+//     </table>
+      
 //     </>
 //   )
 // }
-// export default App;
+const ans=EmpData.map((key)=>{
+  return(
+    <>
+    <tr>
+      <td>{key.empno}</td>
+      <td>{key.name}</td>
+      <td>{key.destignation}</td>
+      <td>{key.salary}</td>
 
+    </tr>
+    </>
+  )
+});
+return (
+  <>
+  <table>
+   <tr>
+    <th>Employ Number</th>
+    <th>Employ Name</th>
+    <th>Degisnation</th>
+    <th>Salary</th>
+   </tr>
+   {ans}
+  </table>
+  </>
+  
+)
 
-// const App = () => {
-//   return (
-//     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh", backgroundColor: "#f7fafc" }}>
-//       <div style={{ backgroundColor: "cyan", padding: "16px", borderRadius: "12px", border: "4px solid blue" }}>
-//         <div style={{ backgroundColor: "lime", padding: "16px", borderRadius: "12px" }}>
-//           <div style={{ backgroundColor: "orange", padding: "6px 12px", borderRadius: "9999px", border: "1px solid red", textAlign: "center" }}>
-//             <h1 style={{ color: "white", fontWeight: "bold", fontSize: "1.125rem" }}>CYBROM</h1>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-
-// export default App;
-
-const App=()=>{
-    return(
-        <>
-        <h1>Welcome to cybrom</h1>
-        <h2>We are web developer</h2>
-        </>
-    )
 }
 export default App;
