@@ -1,94 +1,26 @@
-
-import EmpData from "../EmpData";
-const App=()=>{
-
-//   const student=[
-//     {
-//       "rollno":123,
-//       "name":"suraj",
-//       "city":"Delhi",
-//       "fees":4999
-//     },
-//      {
-//       "rollno":123,
-//       "name":"shyam",
-//       "city":"Mumbai",
-//       "fees":4999
-//     },
-//      {
-//       "rollno":123,
-//       "name":"ramesh",
-//       "city":"Pune",
-//       "fees":4999
-//     },
-//      {
-//       "rollno":23,
-//       "name":"rahul",
-//       "city":"Hydrabad",
-//       "fees":49393
-//     },
-//      {
-//       "rollno":45,
-//       "name":"ram",
-//       "city":"Bhopal",
-//       "fees":498099
-//     }
-//   ]
-
-//   const ans=student.map((key)=>{
-//     return(
-//     <tr>
-
-//       <td>{key.rollno}</td>
-//       <td>{key.name}</td>
-//       <td>{key.city}</td>
-//       <td>{key.fees}</td>
-
-//     </tr>
-//   )
-//   })
-//     return(
-//         <>
-//     <table>
-//       <tr>
-//         <th>Roll NO</th>
-//         <th>Name</th>
-//         <th>City</th>
-//         <th>Fees</th>
-//       </tr>
-//       {ans}
-//     </table>
-      
-//     </>
-//   )
-// }
-const ans=EmpData.map((key)=>{
-  return(
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './Layout';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import NoPage from './NoPage';
+const App = () => {
+  return (
     <>
-    <tr>
-      <td>{key.empno}</td>
-      <td>{key.name}</td>
-      <td>{key.destignation}</td>
-      <td>{key.salary}</td>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout/>}>
+      <Route index element={<Home/>}/>
+      <Route path="home" element={<Home/>}/>
+      <Route path="about" element={<About/>}/>
+      <Route path="contact" element={<Contact/>}/>
+      <Route path="*" element={<NoPage/>}/>
 
-    </tr>
+    </Route>
+    </Routes>
+    </BrowserRouter>
     </>
   )
-});
-return (
-  <>
-  <table>
-   <tr>
-    <th>Employ Number</th>
-    <th>Employ Name</th>
-    <th>Degisnation</th>
-    <th>Salary</th>
-   </tr>
-   {ans}
-  </table>
-  </>
-  
-)
-
 }
 export default App;
