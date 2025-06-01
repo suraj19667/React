@@ -1,8 +1,8 @@
-
 const About=()=>{
     return(
         <>
-        <h1>Contact us Pages</h1>
+        <h2>Welcome to About</h2>
+        
         </>
     )
 }

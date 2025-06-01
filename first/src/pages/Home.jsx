@@ -1,7 +1,8 @@
 const Home=()=>{
     return(
         <>
-        <h1>Welcome to Home</h1>
+        <h2>Welcome to Home Page</h2>
+        
         </>
     )
 }

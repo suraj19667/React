@@ -1,10 +1,10 @@
-import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
-import NoPage from './NoPage';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Join from './pages/Join';
+import Contact from './pages/Contact';
 const App = () => {
   return (
     <>
@@ -14,8 +14,9 @@ const App = () => {
       <Route index element={<Home/>}/>
       <Route path="home" element={<Home/>}/>
       <Route path="about" element={<About/>}/>
+      <Route path="services" element={<Services/>}/>
+      <Route path="join" element={<Join/>}/>
       <Route path="contact" element={<Contact/>}/>
-      <Route path="*" element={<NoPage/>}/>
 
     </Route>
     </Routes>

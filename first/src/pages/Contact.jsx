@@ -1,7 +1,8 @@
 const Contact=()=>{
     return(
         <>
-        <h1>This is Contact</h1>
+        <h2>Welcome to Contact Page</h2>
+        
         </>
     )
 }
