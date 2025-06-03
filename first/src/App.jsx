@@ -1,27 +1,25 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './Layout';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Join from './pages/Join';
-import Contact from './pages/Contact';
-const App = () => {
-  return (
-    <>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout/>}>
-      <Route index element={<Home/>}/>
-      <Route path="home" element={<Home/>}/>
-      <Route path="about" element={<About/>}/>
-      <Route path="services" element={<Services/>}/>
-      <Route path="join" element={<Join/>}/>
-      <Route path="contact" element={<Contact/>}/>
+import React, { useState } from "react";
 
-    </Route>
-    </Routes>
-    </BrowserRouter>
-    </>
-  )
+function App() {
+  const [fact, setFact] = useState("");
+
+  const fetchFact = async () => {
+    try {
+      const response = await fetch("https://catfact.ninja/fact");
+      const data = await response.json();
+      setFact(data.fact);
+    } catch (error) {
+      setFact("Failed to fetch fact. Please try again.");
+    }
+  };
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "100px" }}>
+      <h1>Random Cat Fact</h1>
+      <button onClick={fetchFact}>Get Fact</button>
+      <p style={{ marginTop: "20px" }}>{fact}</p>
+    </div>
+  );
 }
+
 export default App;
